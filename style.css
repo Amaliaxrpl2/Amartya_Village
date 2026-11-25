@@ -1,8 +1,8 @@
 
-/* =========================================
+/* ==========================================
    DESA AMARTYA
-   Nature • Culture • Community
-========================================= */
+   Natural Editorial Village Website
+========================================== */
 
 /* RESET */
 * {
@@ -12,6 +12,18 @@
     text-decoration: none;
 }
 
+:root {
+    --dark: #293F30;
+    --green: #506D50;
+    --sage: #A7B69A;
+    --cream: #F7F5ED;
+    --light: #EAEFE5;
+    --brown: #B98B60;
+    --text: #3E503F;
+    --muted: #788274;
+    --white: #FFFFFF;
+}
+
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
@@ -19,21 +31,10 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background: #F8F6EF;
-    color: #354C36;
+    background: var(--cream);
+    color: var(--text);
     line-height: 1.7;
     overflow-x: hidden;
-}
-
-:root {
-    --forest: #263D2D;
-    --green: #536F50;
-    --sage: #A4B398;
-    --cream: #F8F6EF;
-    --soft: #EAEFE4;
-    --brown: #B98759;
-    --text: #354C36;
-    --muted: #778371;
 }
 
 .wrapper {
@@ -49,29 +50,25 @@ img {
 }
 
 h1, h2, h3 {
-    line-height: 1.25;
+    line-height: 1.3;
 }
 
 h2 {
-    font-size: 35px;
+    font-size: 34px;
     margin-bottom: 16px;
 }
 
-a {
-    color: inherit;
-}
-
-/* =========================================
+/* ==========================================
    NAVBAR
-========================================= */
+========================================== */
 
 .navbar {
     width: 100%;
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: var(--forest);
-    box-shadow: 0 5px 25px rgba(25, 45, 28, 0.12);
+    background: var(--dark);
+    box-shadow: 0 4px 18px rgba(0,0,0,0.1);
 }
 
 .nav-wrapper {
@@ -86,7 +83,7 @@ a {
 }
 
 .logo {
-    color: #F8F6EF;
+    color: var(--white);
     font-size: 27px;
     font-weight: bold;
     letter-spacing: 2px;
@@ -96,14 +93,14 @@ a {
 
 .logo span,
 footer h2 span {
-    color: #C99B69;
+    color: var(--brown);
 }
 
 .logo small {
     display: block;
+    color: #B8C6B5;
     font-size: 8px;
     letter-spacing: 2px;
-    color: #B8C6AF;
     font-weight: normal;
     margin-top: 5px;
 }
@@ -112,13 +109,12 @@ footer h2 span {
     list-style: none;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
     gap: 8px;
 }
 
 .menu a {
     display: block;
-    color: #E8EDE3;
+    color: #E8EDE5;
     font-size: 12px;
     font-weight: bold;
     padding: 10px 11px;
@@ -128,18 +124,18 @@ footer h2 span {
 }
 
 .menu a:hover {
-    background: rgba(255,255,255,0.1);
     color: #D9B58C;
+    background: rgba(255,255,255,0.09);
 }
 
 .menu .nav-contact {
-    background: #C18E5E;
+    background: var(--brown);
     color: white;
-    padding: 10px 19px;
+    padding: 10px 18px;
 }
 
 .menu .nav-contact:hover {
-    background: #D2A577;
+    background: #D0A477;
     color: white;
 }
 
@@ -147,18 +143,18 @@ footer h2 span {
     display: none;
 }
 
-/* =========================================
+/* ==========================================
    HERO
-========================================= */
+========================================== */
 
 .hero {
     min-height: 570px;
-    background-image: url("assets/images/hero-mountain.jpg");
-    background-size: cover;
-    background-position: center;
     position: relative;
     display: flex;
     align-items: center;
+    background-image: url("assets/images/hero-mountain.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 .hero-overlay {
@@ -166,18 +162,18 @@ footer h2 span {
     inset: 0;
     background: linear-gradient(
         90deg,
-        rgba(24, 43, 29, 0.82),
-        rgba(24, 43, 29, 0.48),
-        rgba(24, 43, 29, 0.08)
+        rgba(29,49,34,0.83),
+        rgba(29,49,34,0.45),
+        rgba(29,49,34,0.08)
     );
 }
 
 .hero-content {
-    position: relative;
-    z-index: 1;
     width: 88%;
     max-width: 1180px;
     margin: auto;
+    position: relative;
+    z-index: 1;
     color: white;
 }
 
@@ -190,28 +186,28 @@ footer h2 span {
 }
 
 .hero .eyebrow {
-    color: #E3C69F;
+    color: #E6C9A6;
 }
 
 .hero h1 {
-    font-size: clamp(38px, 5vw, 60px);
     max-width: 650px;
+    font-size: clamp(40px, 5vw, 60px);
     margin-bottom: 20px;
     letter-spacing: -1px;
 }
 
 .hero-content > p:not(.eyebrow) {
-    max-width: 520px;
+    max-width: 530px;
     color: #F0F0E9;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
 }
 
 .button {
     display: inline-block;
-    background: #B98759;
-    color: white;
     padding: 13px 27px;
-    border-radius: 40px;
+    background: var(--brown);
+    color: white;
+    border-radius: 30px;
     font-weight: bold;
     font-size: 14px;
     transition: 0.3s;
@@ -219,38 +215,39 @@ footer h2 span {
 
 .button:hover {
     background: #D0A477;
-    transform: translateY(-4px);
+    transform: translateY(-3px);
 }
 
-/* =========================================
+/* ==========================================
    GENERAL SECTION
-========================================= */
+========================================== */
 
 .section {
-    padding: 90px 0;
+    padding: 85px 0;
 }
 
 .soft-bg {
-    background: #EAEFE4;
+    background: var(--light);
 }
 
 .section-heading {
-    text-align: center;
     max-width: 680px;
-    margin: 0 auto 48px;
+    text-align: center;
+    margin: 0 auto 45px;
 }
 
 .section-heading h2 {
-    color: var(--forest);
+    color: var(--dark);
 }
 
 .section-heading > p:last-child {
     color: var(--muted);
+    font-size: 14px;
 }
 
-/* =========================================
+/* ==========================================
    ABOUT
-========================================= */
+========================================== */
 
 .about-content,
 .culture-content,
@@ -258,49 +255,44 @@ footer h2 span {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 65px;
-}
-
-.about-image {
-    position: relative;
+    gap: 60px;
 }
 
 .about-image img {
-    height: 410px;
-    border-radius: 48% 48% 12px 12px;
-    box-shadow: 15px 15px 0 #DCE5D5;
-}
-
-.about-text p {
-    color: var(--muted);
-    margin-bottom: 16px;
+    height: 390px;
+    border-radius: 18px;
+    box-shadow: 12px 12px 0 #DFE7D8;
 }
 
 .about-text h2 {
-    color: var(--forest);
-    font-size: 38px;
+    font-size: 37px;
+    color: var(--dark);
+}
+
+.about-text p:not(.eyebrow) {
+    color: var(--muted);
+    margin-bottom: 15px;
 }
 
 .text-link {
     display: inline-block;
     color: var(--green);
     font-weight: bold;
-    margin-top: 12px;
+    margin-top: 10px;
     transition: 0.3s;
 }
 
 .text-link:hover {
     color: var(--brown);
-    transform: translateX(5px);
 }
 
-/* =========================================
+/* ==========================================
    CARD GRID
-========================================= */
+========================================== */
 
 .card-grid {
     display: grid;
-    gap: 28px;
+    gap: 25px;
 }
 
 .two-column {
@@ -313,70 +305,52 @@ footer h2 span {
 
 .info-card {
     background: white;
-    border-radius: 18px;
+    border-radius: 17px;
     overflow: hidden;
-    box-shadow: 0 8px 25px rgba(40, 65, 40, 0.07);
-    transition: 0.35s;
+    box-shadow: 0 6px 22px rgba(40,60,40,0.06);
+    transition: 0.3s;
 }
 
 .info-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(40, 65, 40, 0.13);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(40,60,40,0.12);
 }
-
-/* FOTO CARD BERVARIASI */
 
 .info-card img {
-    height: 245px;
+    width: 100%;
+    height: 235px;
     padding: 10px;
-    border-radius: 28px;
-    transition: 0.4s;
-}
-
-/* Foto card pertama */
-.info-card:nth-child(1) img {
-    border-radius: 45% 45% 12px 12px;
-}
-
-/* Foto card kedua */
-.info-card:nth-child(2) img {
-    border-radius: 12px 55px 12px 55px;
-}
-
-/* Foto card ketiga */
-.info-card:nth-child(3) img {
-    border-radius: 55px 12px 55px 12px;
-}
-
-.info-card:hover img {
-    transform: scale(1.025);
+    border-radius: 19px;
+    object-fit: cover;
 }
 
 .card-content {
-    padding: 18px 23px 25px;
+    padding: 17px 22px 23px;
 }
 
-.card-content h3,
-.partner-card h3 {
-    color: var(--forest);
-    margin-bottom: 10px;
+.card-content h3 {
+    color: var(--dark);
     font-size: 19px;
+    margin-bottom: 9px;
 }
 
-.card-content p,
-.partner-card p {
+.card-content p {
     color: var(--muted);
     font-size: 14px;
 }
 
-/* =========================================
-   BUDAYA
-========================================= */
+/* ==========================================
+   CULTURE
+========================================== */
 
 .culture-image img {
-    height: 390px;
-    border-radius: 12px 48% 12px 48%;
-    box-shadow: -12px 12px 0 #DCE5D5;
+    height: 370px;
+    border-radius: 18px;
+    box-shadow: 12px 12px 0 #DCE5D5;
+}
+
+.culture-text h2 {
+    color: var(--dark);
 }
 
 .culture-text p:not(.eyebrow) {
@@ -384,134 +358,129 @@ footer h2 span {
     margin-bottom: 15px;
 }
 
-/* =========================================
-   PARTNER
-========================================= */
-
-.partner-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 22px;
-}
+/* ==========================================
+   PARTNER / MITRA
+========================================== */
 
 .partner-card {
+    min-height: 215px;
+    padding: 25px 18px;
     background: white;
-    border-radius: 20px;
-    padding: 24px 18px;
-    min-height: 210px;
+    border: 1px solid #E7EDE2;
+    border-radius: 17px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    gap: 17px;
+    align-items: center;
+    gap: 15px;
     text-align: center;
-    border: 1px solid #E8EDE3;
-    box-shadow: 0 6px 20px rgba(40, 65, 40, 0.06);
+    box-shadow: 0 5px 20px rgba(40,60,40,0.05);
     transition: 0.3s;
-    overflow: hidden;
 }
 
 .partner-card:hover {
-    transform: translateY(-6px);
-    border-color: #A4B398;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(40,60,40,0.11);
 }
 
+/* Logo lingkaran */
 .partner-card img {
-    width: 100%;
-    height: 80px;
+    width: 88px;
+    height: 88px;
+    padding: 13px;
     object-fit: contain;
-    padding: 5px;
+    border-radius: 50%;
+    background: #F0F3EB;
 }
 
 .partner-card h3 {
+    color: var(--dark);
     font-size: 16px;
+    margin-bottom: 7px;
 }
 
 .partner-card p {
+    color: var(--muted);
     font-size: 12px;
     line-height: 1.6;
 }
 
-/* =========================================
-   KEGIATAN MASYARAKAT
-========================================= */
+/* ==========================================
+   ACTIVITY
+========================================== */
+
+.activity-text h2 {
+    color: var(--dark);
+}
 
 .activity-text p:not(.eyebrow) {
     color: var(--muted);
 }
 
 .activity-image img {
-    height: 360px;
-    border-radius: 12px 50% 50% 12px;
-    box-shadow: 12px 12px 0 #DCE5D5;
+    height: 350px;
+    border-radius: 18px;
+    box-shadow: 12px 12px 0 #DFE7D8;
 }
 
-/* =========================================
-   SUNSET
-========================================= */
+/* ==========================================
+   SUNSET GALLERY
+========================================== */
 
 .sunset-section {
-    background: #F0EADB;
+    background: #F0EBDD;
 }
 
 .sunset-grid {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
     align-items: center;
-    gap: 28px;
+    gap: 25px;
 }
 
 .sunset-grid img {
-    height: 330px;
-    border-radius: 15px;
-    transition: 0.4s;
+    width: 100%;
+    height: 310px;
+    border-radius: 18px;
+    object-fit: cover;
 }
 
 .sunset-grid img:first-child {
-    border-radius: 50% 15px 50% 15px;
     height: 370px;
 }
 
-.sunset-grid img:last-child {
-    border-radius: 15px 50% 15px 50%;
-}
-
-.sunset-grid img:hover {
-    transform: translateY(-6px);
-}
-
-/* =========================================
+/* ==========================================
    CONTACT
-========================================= */
+========================================== */
 
 .contact-section {
-    background: #EAEFE4;
+    background: var(--light);
 }
 
 .contact-content {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px;
+    gap: 18px;
 }
 
 .contact-item {
     display: block;
     background: white;
-    padding: 27px 20px;
-    border-radius: 18px 18px 18px 5px;
+    padding: 25px 18px;
+    border-radius: 16px;
     text-align: center;
-    box-shadow: 0 5px 20px rgba(40, 65, 40, 0.05);
+    box-shadow: 0 5px 18px rgba(40,60,40,0.05);
     transition: 0.3s;
 }
 
 .contact-item:hover {
     transform: translateY(-5px);
-    background: #F8F6EF;
+    background: #FBFAF5;
 }
 
 .contact-item h3 {
-    color: var(--forest);
-    margin-bottom: 12px;
+    color: var(--dark);
+    margin-bottom: 10px;
 }
 
 .contact-item p {
@@ -525,44 +494,47 @@ footer h2 span {
     margin-top: 8px;
 }
 
-/* =========================================
+/* ==========================================
    FOOTER
-========================================= */
+========================================== */
 
 footer {
-    background: var(--forest);
-    color: var(--cream);
-    padding: 45px 0 25px;
+    background: var(--dark);
+    color: white;
+    padding: 42px 0 25px;
     text-align: center;
 }
 
 footer h2 {
     font-size: 29px;
-    margin-bottom: 5px;
     letter-spacing: 2px;
+    margin-bottom: 5px;
 }
 
 footer p {
-    color: #C9D4C1;
+    color: #C9D4C5;
     font-size: 14px;
 }
 
 .copyright {
-    margin-top: 25px;
+    margin-top: 22px;
     padding-top: 20px;
     border-top: 1px solid rgba(255,255,255,0.15);
     font-size: 12px;
 }
 
-/* =========================================
+/* ==========================================
    TABLET
-========================================= */
+========================================== */
 
 @media screen and (max-width: 1000px) {
 
     .nav-wrapper {
-        min-height: 75px;
         gap: 12px;
+    }
+
+    .logo {
+        font-size: 23px;
     }
 
     .menu {
@@ -570,20 +542,12 @@ footer p {
     }
 
     .menu a {
-        font-size: 11px;
-        padding: 9px 8px;
+        font-size: 10px;
+        padding: 9px 7px;
     }
 
-    .logo {
-        font-size: 23px;
-    }
-
-    .three-column {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .partner-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+    .partner-card {
+        min-height: 190px;
     }
 
     .about-content,
@@ -591,11 +555,15 @@ footer p {
     .activity-content {
         gap: 35px;
     }
+
+    .partner-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 }
 
-/* =========================================
+/* ==========================================
    MOBILE
-========================================= */
+========================================== */
 
 @media screen and (max-width: 700px) {
 
@@ -603,12 +571,12 @@ footer p {
         width: 90%;
     }
 
-    /* NAVBAR HP */
+    /* NAVBAR */
 
     .nav-wrapper {
         width: 90%;
         min-height: auto;
-        padding: 15px 0;
+        padding: 14px 0;
         flex-direction: column;
         align-items: flex-start;
         gap: 13px;
@@ -618,22 +586,14 @@ footer p {
         font-size: 23px;
     }
 
-    .logo small {
-        font-size: 7px;
-    }
-
-    .menu-toggle {
-        display: none;
-    }
-
     .menu {
         width: 100%;
         display: flex;
-        justify-content: flex-start;
         flex-wrap: nowrap;
-        gap: 7px;
         overflow-x: auto;
-        padding: 2px 0 8px;
+        justify-content: flex-start;
+        gap: 7px;
+        padding-bottom: 7px;
         scrollbar-width: none;
     }
 
@@ -648,22 +608,14 @@ footer p {
     .menu a {
         font-size: 11px;
         padding: 8px 13px;
-        background: rgba(255,255,255,0.07);
+        background: rgba(255,255,255,0.06);
     }
 
     /* HERO */
 
     .hero {
-        min-height: 490px;
+        min-height: 470px;
         background-position: center;
-    }
-
-    .hero-overlay {
-        background: linear-gradient(
-            90deg,
-            rgba(24, 43, 29, 0.82),
-            rgba(24, 43, 29, 0.38)
-        );
     }
 
     .hero-content {
@@ -681,7 +633,7 @@ footer p {
     /* SECTION */
 
     .section {
-        padding: 65px 0;
+        padding: 62px 0;
     }
 
     h2 {
@@ -692,34 +644,26 @@ footer p {
         margin-bottom: 32px;
     }
 
-    .section-heading > p:last-child {
-        font-size: 14px;
-    }
-
     /* ABOUT */
 
     .about-content,
     .culture-content,
     .activity-content {
         grid-template-columns: 1fr;
-        gap: 35px;
+        gap: 32px;
     }
 
     .about-image img {
-        height: 290px;
-        border-radius: 48% 48% 12px 12px;
+        height: 275px;
     }
 
     .about-text h2 {
         font-size: 30px;
     }
 
-    .culture-image img {
-        height: 290px;
-    }
-
+    .culture-image img,
     .activity-image img {
-        height: 280px;
+        height: 275px;
     }
 
     /* CARD */
@@ -729,34 +673,28 @@ footer p {
         grid-template-columns: 1fr;
     }
 
-    .card-grid {
-        gap: 22px;
-    }
-
     .info-card img {
-        height: 240px;
-    }
-
-    .card-content {
-        padding: 17px 20px 22px;
+        height: 230px;
     }
 
     /* PARTNER */
 
-    .partner-grid {
+    .partner-grid,
+    #partner .three-column {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 13px;
     }
 
     .partner-card {
-        min-height: 160px;
+        min-height: 175px;
         padding: 16px 10px;
         gap: 10px;
-        border-radius: 16px;
     }
 
     .partner-card img {
-        height: 65px;
+        width: 75px;
+        height: 75px;
+        padding: 11px;
     }
 
     .partner-card h3 {
@@ -771,12 +709,12 @@ footer p {
 
     .sunset-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 18px;
     }
 
     .sunset-grid img,
     .sunset-grid img:first-child {
-        height: 260px;
+        height: 245px;
     }
 
     /* CONTACT */
@@ -788,22 +726,20 @@ footer p {
 
     .contact-item {
         padding: 20px 12px;
-        border-radius: 15px;
     }
 
     .contact-item h3 {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .contact-item p {
         font-size: 11px;
     }
-
 }
 
-/* =========================================
-   SMALL MOBILE
-========================================= */
+/* ==========================================
+   SMALL PHONE
+========================================== */
 
 @media screen and (max-width: 380px) {
 
@@ -815,17 +751,12 @@ footer p {
         grid-template-columns: 1fr;
     }
 
-    .partner-grid {
+    #partner .three-column {
         grid-template-columns: 1fr;
     }
 
     .partner-card {
-        min-height: 145px;
+        min-height: 160px;
     }
 
-    .info-card img {
-        height: 210px;
-    }
-
-   }
-   
+       }
