@@ -1,0 +1,807 @@
+
+/* =========================================
+   DESA AMARTYA
+   Modern Countryside - Company Profile
+========================================= */
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 110px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #354638;
+    background: #FAF8F1;
+    line-height: 1.7;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.wrapper {
+    width: 88%;
+    max-width: 1180px;
+    margin: auto;
+}
+
+h1, h2, h3 {
+    line-height: 1.25;
+}
+
+h2 {
+    font-size: 36px;
+    color: #293E30;
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #24392D;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+}
+
+.nav-wrapper {
+    width: 90%;
+    max-width: 1250px;
+    min-height: 82px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    color: #F8F4E9;
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    flex-shrink: 0;
+}
+
+.logo span {
+    color: #C99B65;
+}
+
+.logo small {
+    color: #C7CBBE;
+    font-size: 8px;
+    letter-spacing: 2px;
+    margin-top: 5px;
+    font-weight: normal;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 23px;
+    list-style: none;
+}
+
+.menu a {
+    color: #EAEDE5;
+    font-size: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.menu a:hover {
+    color: #D9B47F;
+}
+
+.menu .nav-contact {
+    background: #C99B65;
+    color: #26392D;
+    padding: 11px 19px;
+    border-radius: 3px;
+}
+
+.menu .nav-contact:hover {
+    background: #E5C79C;
+    color: #26392D;
+}
+
+/* Tombol menu tidak digunakan tanpa JavaScript */
+.menu-toggle {
+    display: none;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 610px;
+    background-image: url("assets/images/hero-mountain.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(24, 43, 30, 0.88),
+            rgba(24, 43, 30, 0.45),
+            rgba(24, 43, 30, 0.08)
+        );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    width: 88%;
+    max-width: 1180px;
+    margin: auto;
+    color: white;
+}
+
+.eyebrow {
+    color: #849875;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero .eyebrow {
+    color: #E4C69A;
+}
+
+.hero h1 {
+    font-size: 58px;
+    max-width: 680px;
+    line-height: 1.15;
+    margin-bottom: 23px;
+}
+
+.hero-content > p:not(.eyebrow) {
+    max-width: 510px;
+    color: #F0EFE7;
+    font-size: 15px;
+    margin-bottom: 32px;
+}
+
+.button {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #C99B65;
+    color: #26392D;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+    border-radius: 3px;
+}
+
+.button:hover {
+    background: #F0D5AD;
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   GENERAL SECTION
+========================================= */
+
+.section {
+    padding: 95px 0;
+}
+
+.soft-bg {
+    background: #F0F1E8;
+}
+
+.section-heading {
+    max-width: 680px;
+    text-align: center;
+    margin: 0 auto 50px;
+}
+
+.section-heading h2 {
+    margin-bottom: 15px;
+}
+
+.section-heading > p:last-child {
+    color: #788273;
+    font-size: 14px;
+}
+
+.section-heading .eyebrow {
+    color: #9A805B;
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about-content,
+.culture-content,
+.activity-content {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.about-image img {
+    height: 410px;
+    border-radius: 5px;
+}
+
+.about-text h2,
+.culture-text h2,
+.activity-text h2 {
+    font-size: 39px;
+}
+
+.about-text p:not(.eyebrow),
+.culture-text p:not(.eyebrow) {
+    color: #737E70;
+    font-size: 14px;
+    margin-bottom: 17px;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 12px;
+    color: #6A805C;
+    font-size: 13px;
+    font-weight: bold;
+    border-bottom: 1px solid #9EAD8F;
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+
+.text-link:hover {
+    color: #B17D4C;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.card-grid {
+    display: grid;
+    gap: 27px;
+}
+
+.two-column {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.three-column {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.info-card {
+    background: #FFFFFF;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid #EAE9DE;
+    transition: 0.35s;
+}
+
+.info-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(39, 57, 42, 0.10);
+}
+
+.info-card img {
+    height: 245px;
+    transition: 0.5s;
+}
+
+.info-card:hover img {
+    transform: scale(1.025);
+}
+
+.card-content {
+    padding: 25px 26px 28px;
+}
+
+.card-content h3 {
+    color: #354A38;
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.card-content p {
+    color: #788273;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   CULTURE
+========================================= */
+
+.culture-image img {
+    height: 390px;
+    border-radius: 5px;
+}
+
+
+/* =========================================
+   PARTNER / MITRA
+========================================= */
+
+.partner-card {
+    background: #FFFFFF;
+    min-height: 215px;
+    padding: 25px 20px;
+    border: 1px solid #E8E7DD;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    text-align: center;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.partner-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(39, 57, 42, 0.09);
+}
+
+.partner-card img {
+    width: 100%;
+    max-width: 160px;
+    height: 85px;
+    object-fit: contain;
+    padding: 5px;
+}
+
+.partner-card h3 {
+    color: #354A38;
+    font-size: 16px;
+    margin-bottom: 7px;
+}
+
+.partner-card p {
+    color: #81887B;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   ACTIVITY
+========================================= */
+
+.activity-image img {
+    height: 370px;
+    border-radius: 5px;
+}
+
+.activity-text p:not(.eyebrow) {
+    color: #788273;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   SUNSET GALLERY
+========================================= */
+
+.sunset-section {
+    background: #EDE8DA;
+}
+
+.sunset-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.sunset-grid img {
+    height: 350px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.sunset-grid img:hover {
+    transform: translateY(-5px);
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-section {
+    background: #F0F1E8;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.contact-item {
+    display: block;
+    background: #FFFFFF;
+    padding: 28px 20px;
+    border: 1px solid #E7E7DC;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.contact-item:hover {
+    background: #293E30;
+    transform: translateY(-5px);
+}
+
+.contact-item h3 {
+    color: #354A38;
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.contact-item p {
+    color: #81887B;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.contact-item p b {
+    display: inline-block;
+    color: #A27D50;
+    margin-top: 10px;
+}
+
+.contact-item:hover h3,
+.contact-item:hover p {
+    color: #F5F1E7;
+}
+
+.contact-item:hover p b {
+    color: #E4C69A;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background: #24392D;
+    color: #F8F4E9;
+    padding: 55px 0 30px;
+    text-align: center;
+}
+
+footer h2 {
+    color: #F8F4E9;
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+footer h2 span {
+    color: #C99B65;
+}
+
+footer p {
+    color: #C5CCBF;
+    font-size: 13px;
+}
+
+.copyright {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    font-size: 11px;
+}
+
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media screen and (max-width: 1050px) {
+
+    .nav-wrapper {
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        padding: 17px 0;
+    }
+
+    .logo {
+        text-align: center;
+        align-items: center;
+    }
+
+    .menu {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 13px 20px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .about-content,
+    .culture-content,
+    .activity-content {
+        gap: 35px;
+    }
+
+    .three-column {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media screen and (max-width: 650px) {
+
+    html {
+        scroll-padding-top: 115px;
+    }
+
+    .wrapper,
+    .hero-content {
+        width: 90%;
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+
+    h2 {
+        font-size: 29px;
+    }
+
+    /* NAVBAR HP */
+
+    .nav-wrapper {
+        width: 100%;
+        min-height: auto;
+        padding: 13px 0 10px;
+        gap: 13px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .logo small {
+        font-size: 7px;
+    }
+
+    .menu {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        gap: 22px;
+        padding: 5px 20px 12px;
+        scrollbar-width: none;
+    }
+
+    .menu::-webkit-scrollbar {
+        display: none;
+    }
+
+    .menu li {
+        flex-shrink: 0;
+    }
+
+    .menu a {
+        font-size: 11px;
+    }
+
+    .menu .nav-contact {
+        padding: 8px 13px;
+    }
+
+    /* HERO */
+
+    .hero {
+        min-height: 490px;
+        background-position: center;
+    }
+
+    .hero-overlay {
+        background: linear-gradient(
+            90deg,
+            rgba(24, 43, 30, 0.85),
+            rgba(24, 43, 30, 0.35)
+        );
+    }
+
+    .hero h1 {
+        font-size: 37px;
+    }
+
+    .hero-content > p:not(.eyebrow) {
+        font-size: 13px;
+    }
+
+    .eyebrow {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .button {
+        padding: 12px 22px;
+        font-size: 12px;
+    }
+
+    /* CONTENT */
+
+    .about-content,
+    .culture-content,
+    .activity-content {
+        grid-template-columns: 1fr;
+        gap: 27px;
+    }
+
+    .about-image img,
+    .culture-image img,
+    .activity-image img {
+        height: 260px;
+    }
+
+    .about-text h2,
+    .culture-text h2,
+    .activity-text h2 {
+        font-size: 30px;
+    }
+
+    /* CARD */
+
+    .two-column,
+    .three-column {
+        grid-template-columns: 1fr;
+    }
+
+    .card-grid {
+        gap: 18px;
+    }
+
+    .info-card img {
+        height: 220px;
+    }
+
+    .card-content {
+        padding: 20px;
+    }
+
+    .card-content h3 {
+        font-size: 17px;
+    }
+
+    /* PARTNER */
+
+    .partner-card {
+        min-height: 115px;
+        flex-direction: row;
+        text-align: left;
+        justify-content: flex-start;
+        padding: 15px 18px;
+        gap: 17px;
+    }
+
+    .partner-card img {
+        width: 75px;
+        min-width: 75px;
+        height: 75px;
+    }
+
+    .partner-card h3 {
+        font-size: 14px;
+    }
+
+    .partner-card p {
+        font-size: 11px;
+    }
+
+    /* SUNSET */
+
+    .sunset-grid {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .sunset-grid img {
+        height: 240px;
+    }
+
+    /* CONTACT */
+
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .contact-item {
+        padding: 22px 15px;
+    }
+
+    .section-heading {
+        margin-bottom: 32px;
+    }
+
+    footer {
+        padding: 40px 0 25px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media screen and (max-width: 380px) {
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero {
+        min-height: 450px;
+    }
+
+    .menu {
+        gap: 17px;
+    }
+
+    .menu a {
+        font-size: 10px;
+    }
+
+    .about-text h2,
+    .culture-text h2,
+    .activity-text h2 {
+        font-size: 27px;
+    }
+
+}
